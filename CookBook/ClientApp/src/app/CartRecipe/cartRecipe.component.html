@@ -1,0 +1,8 @@
+﻿<div>
+  <ul (mouseover)="isVisible()" (mouseout)="isVisible()"
+      [ngClass]="{border: !visibleDescription, shadow: !visibleDescription, visibleCart: !visibleDescription,
+    'pt-3': !visibleDescription, 'pr-2': !visibleDescription}">
+    <li class="h3">{{recipe.title}}</li>
+    <li class="small">{{recipe.createTime | date: 'dd/MM/yyyy'}}</li>
+  </ul>
+</div>

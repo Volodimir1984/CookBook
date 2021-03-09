@@ -1,0 +1,24 @@
+﻿<div class="row">
+  <span class="col-3"></span>
+  <form class="col-6 ml-5">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input class="form-control" id="title" placeholder="Title recipe" name="title" [(ngModel)]="recipe.title"
+              #title="ngModel" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea class="form-control" id="description" rows="5" name="description" [(ngModel)]="recipe.description"
+                #description="ngModel" required>
+
+      </textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="submit(recipe)" [disabled]="title.invalid || description.invalid">
+      Create
+    </button>
+  </form>
+  <span class="col-3"></span>
+</div>
+

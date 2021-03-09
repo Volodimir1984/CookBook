@@ -1,0 +1,14 @@
+﻿<div *ngIf="isCreate" class="text-center">
+  <h1>
+    You successfully created new recipe {{title}}
+  </h1>
+
+  <p>
+    It is available for this link <a [routerLink]="['/api', 'recipe', id]">{{title}}</a>
+  </p>
+</div>
+<div *ngIf="!isCreate" class="text-center text-danger">
+  <h1>
+    Failed to create new recipe {{title}}. Perhaps a recipe with such a name already exists.
+  </h1>
+</div>

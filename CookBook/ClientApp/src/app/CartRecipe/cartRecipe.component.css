@@ -1,0 +1,12 @@
+﻿ul {
+  list-style-type: none;
+}
+
+.visible{
+  display: none;
+}
+
+.visibleCart{
+  z-index: 1;
+}
+

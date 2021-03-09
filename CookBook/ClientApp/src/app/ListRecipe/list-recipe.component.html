@@ -1,0 +1,17 @@
+﻿<app-breadcrumb [levels]="info.parents" [isStart]="isStart"></app-breadcrumb>
+
+<button class="float-right btn btn-primary" (click)="sort()">Sort</button>
+
+<div class="recipeList mt-5" *ngIf="info.recipes.length != 0">
+    <div *ngFor="let recipe of info.recipes">
+      <a [routerLink]="['/api', 'recipe', recipe.id]">
+        <app-cartRecipe [recipe]="recipe"></app-cartRecipe>
+      </a>
+    </div>
+</div>
+
+<div *ngIf="info.recipes.length == 0">
+  <h1 class="text-center">There are no similar recipes yet.</h1>
+</div>
+
+
